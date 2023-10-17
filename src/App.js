@@ -71,7 +71,9 @@ function App() {
       {currentSubject.subject && (
         <div className="border p-4 mt-8">
           <h2 className="text-2xl mb-2">{currentSubject.subject}</h2>
-          <div className="text-lg">{currentSubject.text}</div>
+          <div className="text-lg">
+            dangerouslySetInnerHTML={{ html: currentSubject.text }}
+          </div>
         </div>
       )}
     </div>
